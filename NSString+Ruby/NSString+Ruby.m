@@ -450,7 +450,7 @@ NSString* _stringRepresentationOf(id<Concatenatable> object){
       //skip the first match, it's most probably not correct
       if(match.numberOfRanges > 1){
           for(NSInteger i=1;i<match.numberOfRanges;i++){
-	      if ([result rangeAtIndex:i].length!=0) {
+	      if ([match rangeAtIndex:i].length!=0) {
               	  [results addObject:[self substringWithRange:[match rangeAtIndex:i]]];
               }
           }
